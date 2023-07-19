@@ -1,0 +1,181 @@
+.container {
+    position: fixed;
+    top: 0;
+    padding: 25px 0;
+    background-color: var(--color-main-hard);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width: 100%;
+    z-index: 10;
+}
+
+.container ul {
+    margin: 0;
+    padding: 0;
+    margin-right: .5vw;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    overflow: hidden;
+}
+
+.container ul:nth-child(1) {
+    margin-left: 30px;
+    transition: all .2s ease-in-out;
+}
+
+.container ul li .link:hover {
+    text-decoration: underline;
+    transition: all .1s ease-in-out;
+}
+
+.container ul li .link {
+    text-decoration: none;
+    color: var(--color-letters);
+    padding: 27px;
+    overflow: hidden;
+}
+
+.container ul li .link::selection {
+    background-color: transparent;
+}
+
+.bars {
+    color: var(--color-icons);
+    margin-right: 2em;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.bars:hover {
+    transform: scale(125%);
+    transition: all .1s ease-in-out;
+}
+
+
+.containerResponsive {
+    display: none;
+    position: fixed;
+    top: 0;
+    padding: 7px 0;
+    background-color: var(--color-main-hard);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+    transition: all .3s ease-in-out;
+    height: 57px;
+}
+
+.barsResponsive {
+    margin: 15px 0;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+
+.containerResponsive ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.optionsResponsive li,
+.optionsProfile li,
+.barsResponsive {
+    padding: 0 40px;
+    transition: all .2s ease-in-out;
+}
+
+
+.optionsResponsive li {
+    padding: 0;
+    padding: 14px;
+    margin: 0 20px;
+    transition: all .2s ease-in-out;
+}
+
+.separatorResponsive {
+    margin-top: 20px;
+    border-bottom: 1px solid var(--color-main-medium);
+    transition: all .2s ease-in-out;
+}
+
+.separatorResponsiveTop {
+    margin-top: 20px;
+    border-top: 1px solid var(--color-main-medium);
+    transition: all .2s ease-in-out;
+}
+
+
+.optionsResponsive li .link:hover {
+    transition: all .1s ease-in-out;
+}
+
+.optionsResponsive li .link {
+    color: var(--color-letters);
+    overflow: hidden;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.links {
+    color: var(--color-letters);
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.links li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    color: var(--color-letters);
+    padding-left: 6px;
+    transition: all .2s ease-in-out;
+}
+
+.links li label {
+    cursor: pointer;
+    color: var(--color-letters);
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.icon {
+    width: 35px;
+    transition: all .2s ease-in-out;
+}
+
+.linksText {
+    text-decoration: none;
+    display: block;
+    color: var(--color-letters);
+    transition: all .2s ease-in-out;
+}
+
+
+.containerResponsive ul li .link::selection {
+    background-color: transparent;
+}
+
+.profileLi {
+    display: flex;
+    justify-content: space-between;
+    transition: all .2s ease-in-out;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .containerResponsive {
+        display: initial;
+    }
+
+    .container {
+        display: none;
+    }
+}

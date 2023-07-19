@@ -1,0 +1,32 @@
+.excel,
+.pdf {
+    padding: 10px 25px;
+    border: none;
+    transition: all .5s ease-in-out;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.containerExports {
+    display: flex;
+    align-self: center;
+}
+
+.excel:hover,
+.pdf:hover {
+    opacity: .7;
+    transition: all .2s ease;
+}
+
+@media only screen and (max-width: 800px) {
+    .containerExports {
+        justify-content: end;
+        width: 100%;
+
+    }
+
+    .excel, .pdf {
+        padding-right: 0;
+    }
+}

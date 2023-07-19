@@ -1,0 +1,485 @@
+.showOverflow {
+    overflow-y: scroll;
+    height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+    height: 100%;
+}
+
+.containerBorder {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 50px;
+    max-width: 100%;
+}
+
+.containerIzqProducts {
+    transition: all .5s ease-in-out;
+}
+
+.tableProducts {
+    max-width: 100%;
+}
+
+
+.table {
+    transition: all .5s ease-in-out;
+    border-radius: 12px 12px 0px 0px;
+    min-height: 750px;
+    overflow-x: scroll;
+    max-width: 768px;
+}
+
+.tableCreate {
+    min-width: 100px;
+    max-width: 500px;
+    border-collapse: collapse;
+    background-color: #eee;
+    border-spacing: 0;
+    font-size: .8rem;
+    cursor: default;
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
+    transition: all .5s ease-in-out;
+}
+
+.tableCreate tbody,
+.tableCreate thead {
+    display: block;
+    max-width: 100%;
+    min-width: 500px;
+    transition: all .5s ease-in-out;
+
+}
+
+.tableCreate th:first-child {
+    border-radius: 12px 0px 0px 0px;
+}
+
+.tableCreate th:last-child {
+    border-radius: 0 12px 0px 0px;
+}
+
+.tableCreate tbody {
+    min-height: 750px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.tableCreate th,
+.tableCreate td {
+    padding: 10px 15px;
+}
+
+.tableCreate th {
+    font-size: 17px;
+    text-align: start;
+}
+
+.tableCreate tr:nth-child(odd) {
+    background-color: #fefefe;
+}
+
+.tableCreate tbody tr:hover {
+    background-color: var(--color-main-medium);
+}
+
+
+.tableCreate tbody td,
+.tableCreate thead th {
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.tableCreate tbody td:first-child,
+.tableCreate thead th:first-child {
+    min-width: 50px;
+    max-width: 50px;
+}
+
+.tableCreate tbody td:nth-child(2),
+.tableCreate thead th:nth-child(2) {
+    min-width: calc(180px + 65px + 135px);
+    max-width: calc(180px + 65px + 135px);
+}
+
+
+.tableCreate tbody td:nth-child(3),
+.tableCreate thead th:nth-child(3) {
+    min-width: calc(180px + 50px);
+    max-width: calc(180px + 50px);
+}
+
+.tableCreate tbody td:last-child,
+.tableCreate thead th:last-child {
+    min-width: 100px;
+    max-width: 100px;
+}
+
+
+.addProduct:hover {
+    transform: scale(115%);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.containerDerShopping {
+    margin: 20px;
+    margin-left: 40px;
+    transition: all .5s ease-in-out;
+}
+
+.shoppingCart {
+    transition: all .5s ease-in-out;
+    border-radius: 12px 12px 0px 0px;
+    min-height: 500px;
+    overflow-x: scroll;
+    max-width: 600px;
+}
+
+.tableCreateShop {
+    min-width: 500px;
+    border-collapse: collapse;
+    background-color: #eee;
+    border-spacing: 0;
+    font-size: .9rem;
+    cursor: default;
+    border-radius: 12px 12px 0 0;
+    box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
+    transition: all .5s ease-in-out;
+    width: 100%;
+}
+
+.tableCreateShop tbody,
+.tableCreateShop thead {
+    max-width: 100%;
+    min-width: 500px;
+    display: block;
+    transition: all .5s ease-in-out;
+}
+
+.tableCreateShop th:first-child {
+    border-radius: 12px 0px 0px 0px;
+}
+
+.tableCreateShop th:last-child {
+    border-radius: 0 12px 0px 0px;
+}
+
+.tableCreateShop tbody {
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.tableCreateShop th,
+.tableCreateShop td {
+    padding: 10px 15px;
+}
+
+.tableCreateShop th {
+    font-size: 17px;
+    text-align: start;
+}
+
+.tableCreateShop tr:nth-child(odd) {
+    background-color: #fefefe;
+}
+
+.tableCreateShop tbody tr:hover {
+    background-color: var(--color-main-medium);
+
+}
+
+.tableCreateShop tbody td,
+.tableCreateShop thead th {
+    max-width: 150px;
+    min-width: 150px;
+}
+
+.tableCreateShop tbody td:first-child,
+.tableCreateShop thead th:first-child {
+    max-width: 50px;
+    min-width: 50px;
+}
+
+.tableCreateShop tbody td:last-child,
+.tableCreateShop thead th:last-child {
+    max-width: 100px;
+    min-width: 100px;
+}
+
+.iconDelete:hover {
+    transform: scale(115%);
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.containerStore {
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.containerStore label {
+    font-size: .9rem;
+    margin-left: 0;
+}
+
+.containerStore select {
+    display: block;
+    height: 2.4rem;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 20px 0;
+    width: 100%;
+    border: 1px solid transparent;
+    transition: all .3s ease-in-out;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.containerStore select:focus {
+    outline: none;
+    /* border: 1px solid #93BBBF; */
+    border: 1px solid var(--color-main-medium);
+    transition: all .3s ease-in-out;
+}
+
+.total {
+    display: grid;
+    grid-template-rows: repeat(minmax(1fr, 1fr), 2);
+    width: 100%;
+    height: 30%;
+    margin-top: 15px;
+    transition: all .5s ease-in-out;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 15px;
+    font-size: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.results h3 {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s ease-in-out;
+}
+
+.results span::before {
+    content: 'S/. ';
+}
+
+.results span {
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.resultsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+}
+
+.resultsContainer span {
+    padding-left: 20px;
+}
+
+.btnRegister {
+    justify-self: center;
+    align-self: flex-start;
+    transition: all .5s ease-in-out;
+}
+
+.btnRegister button {
+    border: none;
+    display: block;
+    transition: all .5s ease-in-out;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--color-button);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    font-size: 20px;
+}
+
+.btnRegister button:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.changeToScanner {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    box-shadow: rgba(100, 100, 111, .4) 0px 7px 20px 0px;
+    width: 55px;
+    height: 55px;
+    border-radius: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.changeToScanner:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+.scanner {
+    width: 400px;
+    height: 400px;
+    max-width: 600px;
+    max-height: 600px;
+    margin: 20px auto;
+    border: 2.5px solid var(--color-main-hard);
+}
+
+@media only screen and (max-width: 1950px) {
+    .mainContainer {
+        margin-left: 80px;
+        width: 90%;
+    }
+
+    .containerBorder {
+        max-width: 75%;
+    }
+
+}
+
+@media only screen and (max-width: 1850px) {
+    .mainContainer {
+        margin-left: 80px;
+        width: 90%;
+    }
+
+    .containerBorder {
+        display: block;
+        max-width: 75%;
+    }
+
+}
+
+@media only screen and (max-width: 1700px) {
+
+    .mainContainer {
+        max-width: 100%;
+
+    }
+
+    .container {
+        max-width: 100%;
+
+    }
+
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .containerStore {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .containerStore select {
+        width: 90%;
+    }
+
+    .containerStore select:focus {
+        outline: none;
+        /* border: 1px solid #93BBBF; */
+        border: 1px solid var(--color-main-medium);
+        transition: all .3s ease-in-out;
+    }
+
+    .scanner {
+        width: 300px;
+        height: 300px;
+    }
+
+    .container {
+        margin-top: 40px;
+        display: block;
+        height: 100%;
+    }
+
+    .containerBorder {
+        display: block;
+        overflow: hidden;
+        padding-top: 0;
+        max-width: 100%;
+    }
+
+    .table {
+        min-height: 500px;
+        overflow-x: scroll;
+    }
+
+    .tableCreate {
+        min-height: 500px;
+    }
+
+    .tableCreate tbody {
+        max-height: 500px;
+    }
+
+    .containerDerShopping {
+        margin: 0;
+        margin-top: 40px;
+        transition: all .5s ease-in-out;
+    }
+
+    .shoppingCart {
+        min-height: 500px;
+        overflow-x: scroll;
+    }
+
+    .resultsContainer {
+        margin: 20px;
+        margin-bottom: 40px;
+    }
+
+
+    .tableCreateShop tbody td,
+    .tableCreateShop thead th {
+        max-width: 210px;
+        min-width: 210px;
+    }
+
+    .tableCreateShop {
+        min-height: 500px;
+    }
+
+    .tableCreateShop tbody {
+        max-height: 500px;
+    }
+
+    .btnRegister {
+        margin: 20px;
+        margin-bottom: 40px;
+    }
+}

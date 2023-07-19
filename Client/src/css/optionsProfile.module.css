@@ -1,0 +1,72 @@
+.container {
+    z-index: 10;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    right: 34px;
+    top: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.95px 2.95px 2.6px;
+    cursor: default;
+    transition: all .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.container button {
+    height: 100%;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.container button:nth-child(1) {
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid var(--color-main-hard);
+}
+
+.container button:nth-child(2) {
+    border-radius: 0 0 10px 10px;
+}
+
+.container button:hover {
+    /* background-color: #93BBBF28; */
+    color: var(--color-main-hard);
+    background-color: var(--color-main-medium);
+}
+
+
+.optionsProfileResponsive {
+    display: flex;
+    flex-direction: column;
+}
+
+.optionsProfileResponsive button {
+    width: 40%;
+    text-align: start;
+    margin: 5px 0;
+    padding: 5px 0;
+    padding-left: 15px;
+    border: 0;
+    background-color: transparent;
+    color: var(--color-letters);
+    cursor: pointer;
+}
+
+.optionsProfileResponsive button:nth-child(1) {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .containerResponsive {
+        display: initial;
+    }
+
+    .container {
+        display: none;
+    }
+}

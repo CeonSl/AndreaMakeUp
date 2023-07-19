@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* #F2F2F2	#93BBBF	#374342	#899B9F	#0D0D0D COLORES DE LA PAGINA */
+
+:root {
+  --color-button: #fff;
+  --color-main-hard: #D14D72;
+  --color-main-medium: #FCC8D1;
+  --color-main-medium-alternative: #D14D72;
+  --color-letters: #FEF2F4;
+  --color-icons: #FEF2F4;
+}
+
+::-webkit-scrollbar {
+  width: .6em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 100vw;
+  margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+  border-radius: 100vw;
+}
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-size: .80rem;
+  overflow: hidden;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1800px) {
+  body {
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  body {
+    font-size: .78rem;
+  }
+}

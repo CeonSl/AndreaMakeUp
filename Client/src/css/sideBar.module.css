@@ -1,0 +1,100 @@
+.container {
+    position: fixed;
+    left: 0;
+    top: 65px;
+    background-color: var(--color-main-hard);
+    height: 100vh;
+    border-top: 0;
+    transition: all .5s ease-in-out;
+    /* width: 300px; */
+    width: 75px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 10px 6px 2px;
+    overflow: hidden;
+    z-index: 11;
+}
+
+.container ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    transition: all .5s ease-in-out;
+}
+
+.container ul li:hover {
+    /* background-color: #93BBBF; */
+    background-color: var(--color-main-medium);
+    transition: all .1s ease-in-out;
+}
+
+.container ul li:hover .link, .container ul li:hover .icon{
+    color: var(--color-main-hard);
+    transition: all .1s ease-in-out;
+}
+
+.liSelected {
+    background-color: var(--color-main-medium);
+    color: var(--color-main-hard);
+}
+
+.container ul li:hover,
+.container ul li:hover .link {
+    transition: all .1s ease-in-out;
+}
+
+.container ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 5px 15px;
+    padding-left: 15px; */
+    transition: all .5s ease;
+    /* width: 300px; */
+    width: 100%;
+    padding: 5px 5px 5px 10px;
+}
+
+.icon {
+    min-width: 50px;
+    padding: 12px 0px;
+    justify-self: center;
+    transition: all .5s ease;
+}
+
+.link label {
+    display: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.link {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-letters);
+    text-align: start;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.gearIcon {
+    color: var(--color-icons);
+    position: absolute;
+    left: 25px;
+    bottom: 100px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.gearIcon:hover {
+    transform: scale(115%);
+    transition: all .2s ease;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .container {
+        display: none;
+    }
+}

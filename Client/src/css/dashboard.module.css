@@ -1,0 +1,270 @@
+.overflow {
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+
+.containerBorder {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    padding-top: 0;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.containerOptionsPerfil {
+    display: none;
+}
+
+.containerDataMain {
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+
+.add {
+    font-size: .9rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 5px;
+    transition: all .1s ease-in-out;
+    margin-left: 10px;
+}
+
+
+.add:hover {
+    /* border: 1px solid #93BBBF; */
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+.containerSearchExportsSort {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.containerCheckBox {
+    width: 50%;
+    transition: all .5s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.containerCheckBox input[type='checkbox'] {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 10px;
+}
+
+.table {
+    transition: all .5s ease-in-out;
+    border-radius: 12px 12px 0px 0px;
+    min-height: 680px;
+    overflow-x: scroll;
+}
+
+.table table {
+    min-width: 1000px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: .9rem;
+    cursor: default;
+    border-radius: 12px 12px 0 0;
+    transition: all .5s ease-in-out;
+}
+
+.table tbody,
+.table thead {
+    display: block;
+    max-width: 100%;
+    min-width: 1200px;
+    transition: all .2s ease-in-out;
+}
+
+.table th:first-child {
+    border-radius: 12px 0px 0px 0px;
+}
+
+.table th:last-child {
+    border-radius: 0 12px 0px 0px;
+}
+
+.table tbody {
+    max-height: 680px;
+    overflow-y: scroll;
+}
+
+.table th,
+.table td {
+    padding: 15px 25px;
+}
+
+.table th {
+    font-size: 17px;
+    text-align: start;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #fefefe;
+}
+
+.table tbody tr:hover {
+    /* background-color: #93bbbf9d; */
+    background-color: var(--color-main-medium);
+    color: var(--color-letters);
+}
+
+.table tbody tr {
+    border-bottom: .5px solid #eee;
+}
+
+/* .table tbody td, */
+.table thead th,
+.table tbody td {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.table thead th:first-child,
+.table tbody td:first-child {
+    min-width: 50px;
+    max-width: 50px;
+}
+
+.table thead th:nth-child(2),
+.table tbody td:nth-child(2) {
+    min-width: 350px;
+    max-width: 350px;
+}
+
+.table thead th:nth-child(4),
+.table tbody td:nth-child(4) {
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.table thead th:nth-child(5),
+.table tbody td:nth-child(5) {
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.table thead th:nth-child(6),
+.table tbody td:nth-child(6) {
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.table thead th:nth-child(7),
+.table tbody td:nth-child(7) {
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.table thead th:last-child,
+.table tbody td:last-child {
+    min-width: 150px;
+    max-width: 150px;
+}
+
+
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: -1;
+}
+
+.priorityToast {
+    z-index: 10;
+    position: absolute;
+    top: 100px;
+}
+
+.link {
+    color: #000;
+}
+
+@media only screen and (max-width: 1840px) {
+    .container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .containerBorder {
+        max-width: 70%;
+        margin-left: 0;
+        display: inline-block;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .container {
+        margin-left: 0px;
+    }
+
+    .containerBorder {
+        margin: 0px;
+        max-width: 100%;
+        max-height: 100%;
+        display: flex;
+    }
+
+    .containerSearchExportsSort {
+        flex-direction: column;
+        justify-content: start;
+        width: 100%;
+    }
+
+
+    .containerCheckBox {
+        width: 100%;
+        padding: 10px;
+        justify-content: start;
+        padding-left: 0;
+    }
+
+    .add {
+        margin-left: 0;
+    }
+
+    .table tbody td,
+    .table thead th {
+        padding-left: 5px;
+    }
+
+    .table {
+        min-height: 500px;
+    }
+
+    .table tbody {
+        max-height: 500px;
+    }
+}

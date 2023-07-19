@@ -1,0 +1,196 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(-40deg, #0D0D0D, #374342, #93BBBF); */
+    background: linear-gradient(-40deg, var(--color-main-medium), #dbdbdb, var(--color-main-medium));
+    background-size: 200% 200%;
+    animation: gradient 7s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.container .sectionContainer h3 {
+    font-size: 35px;
+    margin: 0;
+    text-align: center;
+    margin: 25px;
+    margin-bottom: 15px;
+}
+
+.container .sectionContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: aliceblue;
+    width: 25vw;
+    height: 50vh;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.sectionContainer form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: none;
+    transition: all .5s ease-in-out;
+}
+
+
+
+.inputs,
+.button {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: all .5s ease-in-out;
+}
+
+.inputs label {
+    font-size: 15px;
+    margin-bottom: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.inputs input {
+    height: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-bottom: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding-left: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.inputs input:focus {
+    outline: none;
+    /* border: 1px solid #93BBBF; */
+    border: 1px solid var(--color-main-medium);
+    transition: all .3s ease-in-out;
+}
+
+.button {
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 18px;
+    height: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.button:hover {
+    /* border: 1px solid #93BBBF; */
+    border: 1px solid var(--color-main-medium);
+    transition: all .3s ease-in-out;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    line-height: 1.2rem;
+    color: #E74646;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    transition: all .2s ease-in-out;
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .container .sectionContainer {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .container .sectionContainer {
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .container .sectionContainer {
+        width: 55vw;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .container .sectionContainer {
+        width: 70vw;
+    }
+
+    .inputs label {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .inputs input {
+        height: 2.5rem;
+    }
+
+    .button {
+        margin-bottom: 10px;
+        font-size: 15px;
+        height: 3rem;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+
+    .container .sectionContainer {
+        width: 80vw;
+    }
+
+    .container .sectionContainer h3 {
+        font-size: 25px;
+        margin: 15px;
+        margin-bottom: 25px;
+    }
+
+    .inputs label {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .inputs input {
+        height: 2rem;
+    }
+
+    .button {
+        margin-bottom: 10px;
+        font-size: 15px;
+        height: 3rem;
+    }
+}

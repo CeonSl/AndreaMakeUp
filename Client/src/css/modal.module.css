@@ -1,0 +1,193 @@
+.container {
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.modal {
+    width: 475px;
+    min-height: 100px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    background-color: #fff;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
+    padding: 20px;
+}
+
+.headerModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.headerModal h3 {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-main-hard);
+}
+
+.button {
+    position: absolute;
+    top: 24px;
+    right: 35px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .19s ease-in all;
+}
+
+.button:hover {
+    color: var(--color-main-hard);
+    transform: scale(115%);
+}
+
+.mainData {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(1fr, 2);
+}
+
+.mainData label {
+    font-size: 15px;
+    margin: 0 20px;
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+}
+
+.mainData input {
+    height: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    transition: all .3s ease-in-out;
+    width: 50%;
+    padding-left: 10px;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputWithLabel {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
+
+.buttonAdd {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 100%;
+    width: 100%;
+}
+
+
+.buttonAdd button {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all .3s ease-in-out;
+}
+
+.buttonAdd button:hover {
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+
+.textChange {
+    color: #000;
+    font-size: 16px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.buttons button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    color: var(--color-letters);
+    cursor: pointer;
+}
+
+.buttonNo {
+    background-color: #E74646;
+    margin-left: 20px;
+    transition: all .1s ease-in-out;
+}
+
+.buttonYes {
+    background-color: #03C988;
+    transition: all .1s ease-in-out;
+}
+
+.buttonNo:hover {
+    transform: scale(1.05);
+    transition: all .1s ease-in-out;
+}
+
+.buttonYes:hover {
+    transform: scale(1.05);
+    transition: all .1s ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .modal {
+        width: 375px;
+        min-height: 100px;
+        height: 180px;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        background-color: #fff;
+        position: relative;
+        border-radius: 5px;
+        box-shadow: rgba(100, 100, 111, .2) 0px 7px 29px 0px;
+        padding: 20px;
+    }
+
+
+    .headerModal h3 {
+        font-size: 15px;
+    }
+
+    .mainData label {
+        font-size: 14px;
+    }
+
+    .mainData input {
+        height: 2rem;
+        width: 25%;
+    }
+
+    .buttonAdd button {
+        padding: 5px 10px;
+    }
+}
