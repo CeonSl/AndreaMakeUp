@@ -20,6 +20,7 @@ import EditStore from './pages/store/EditStore';
 import EditSells from './pages/sells/EditSells';
 import { CssBaseline } from '@mui/material';
 import { Navigation } from './components/Navigation';
+import { Graphics } from './pages/graphics/Graphics';
 
 function App() {
   const isAuth = useAuthStore(state => state.isAuth);
@@ -33,6 +34,8 @@ function App() {
           <Route path='/login' element={<Login />} />
 
           <Route element={<><Navigation/> <ProtectedRoute isAllowed={isAuth} /></>}>
+            <Route path='/graphics' element={<Graphics/>}/>
+            
             <Route path='/products' element={<DashBoard />} />
             <Route path='/products/add' element={<AddProduct />} />
             <Route path='/products/delete/:id' element={<ProductsDelete />} />

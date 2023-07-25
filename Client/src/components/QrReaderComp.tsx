@@ -1,6 +1,6 @@
 import { OnResultFunction, QrReader } from 'react-qr-reader'
 import stylesAddSell from '../css/addSell.module.css'
-import { ChangeEvent, Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { IProducts } from '../types/Products';
 import { FormControl, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeEvent } from '@mui/material';
 

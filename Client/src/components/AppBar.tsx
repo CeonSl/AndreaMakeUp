@@ -1,4 +1,4 @@
-import { Navigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { BottomNavigation, BottomNavigationAction, Paper, ThemeProvider } from "@mui/material";
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 import CategoryIcon from '@mui/icons-material/Category';

@@ -1,7 +1,4 @@
 import OptionButtons from "./OptionButtons";
-import styles from '../css/dashboard.module.css'
-import { IParams } from "../types/Params";
-import stylesCategories from '../css/params.module.css'
 import { useEffect } from "react";
 import { IStores } from "../types/Stores";
 import { Table as MUITable } from '@mui/material';
