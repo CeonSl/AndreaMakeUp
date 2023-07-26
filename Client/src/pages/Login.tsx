@@ -15,19 +15,17 @@ export function Login() {
         e.preventDefault()
         const email = (e.currentTarget.elements[0] as HTMLInputElement).value
         const password = (e.currentTarget.elements[2] as HTMLInputElement).value
-        console.log(password);
         try {
             const resLogin = await loginRequest(email, password)
-            console.log('respuesto',resLogin);
+            console.log('respuesta',resLogin);
             setToken(resLogin.data.token)
             const resProfile = await profileRequest()
             setProfile(resProfile.data.profile)
-            navigate('/products')
+            navigate('/graphics')
         } catch (error: unknown) {
             if (error instanceof AxiosError) {
                 const messages = error.response?.data.messages
                 setError({ 'errors': messages })
-                console.log(messages);
             }
         }
 

@@ -20,9 +20,7 @@ interface props {
 }
 export default function LoginPage({ handleSubmit, error }: props) {
     const [showPassword, setShowPassword] = useState(false);
-    console.log(error);
     const handleClickShowPassword = () => setShowPassword((show) => !show);
-
     const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     };

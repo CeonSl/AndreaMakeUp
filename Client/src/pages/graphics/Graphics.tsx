@@ -1,37 +1,109 @@
-import { Box,  Paper, Typography } from "@mui/material";
-import "../../../node_modules/react-vis/dist/style.css";
-import {
-  XYPlot,
-  LineSeries,
-  XAxis,
-  YAxis,
-  VerticalGridLines,
-  HorizontalGridLines,
-} from "react-vis";
+import { Box, Paper, Typography } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import "dayjs/locale/es";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import PaperWithStadistics from "../../components/PaperWithStadistics";
 import MovingIcon from "@mui/icons-material/Moving";
-
-export const data = [
-  { x: 0, y: 8 },
-  { x: 1, y: 5 },
-  { x: 2, y: 4 },
-  { x: 3, y: 9 },
-  { x: 4, y: 1 },
-  { x: 5, y: 7 },
-  { x: 6, y: 6 },
-  { x: 7, y: 3 },
-  { x: 8, y: 2 },
-  { x: 9, y: 0 },
-];
+import { Line, Bar } from "react-chartjs-2";
+import {
+  BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LineElement,
+  LinearScale,
+  PointElement,
+  Title,
+  Tooltip,
+} from "chart.js";
 
 export function Graphics() {
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    BarElement
+  );
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top" as const,
+      },
+    },
+  };
+
+  const labels = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30,
+  ];
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Tienda 1",
+        data: [1, 2, 3, 12, 32, 12, 14, 141],
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+      {
+        label: "Tienda 2",
+        data: [1, 2, 12],
+        borderColor: "rgb(53, 162, 235)",
+        backgroundColor: "rgba(53, 162, 235, 0.5)",
+      },
+    ],
+  };
+
+  const optionsBar = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  };
+  const dataBar = {
+    labels: [
+      "producto 1",
+      "producto 2",
+      "producto 3",
+      "producto 4",
+      "producto 5",
+      "producto 6",
+      "producto 7",
+      "producto 8",
+      "producto 9",
+      "producto 10",
+    ],
+    datasets: [
+      {
+        data: [2, 3, 13, 13, 131, 313, 11, 20, 42, 112],
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.5)",
+          "rgba(99, 255, 132, 0.5)",
+          "rgba(100, 205, 199, 0.5)",
+          "rgba(255, 99, 232, 0.5)",
+          "rgba(255, 199, 132, 0.5)",
+          "rgba(155, 99, 132, 0.5)",
+          "rgba(55, 99, 132, 0.5)",
+          "rgba(255, 120, 132, 0.5)",
+          "rgba(255, 99, 32, 0.5)",
+          "rgba(155, 29, 232, 0.5)"
+        ],
+      },
+    ],
+  };
+
   return (
     <>
-      <Box sx={{ my: 13, mt: 15, mx: 5 }}>
+      <Box sx={{ my: 13, mx: 12 }}>
         <Typography
           variant="h4"
           sx={{
@@ -163,6 +235,7 @@ export function Graphics() {
             <Typography
               sx={{
                 height: 1,
+                padding: 1,
                 display: "flex",
                 alignItems: "center",
                 marginLeft: 2,
@@ -176,15 +249,21 @@ export function Graphics() {
           <Box
             sx={{
               flex: "80%",
+              padding: "0 20px 20px 20px",
+              maxWidth: "1300px",
+              width: 1,
+              alignSelf: "center",
             }}
           >
-                <XYPlot height={300} width={300}>
-                  <VerticalGridLines />
-                  <HorizontalGridLines />
-                  <XAxis />
-                  <YAxis />
-                  <LineSeries data={data} style={{fill:"none"}}/>
-                </XYPlot>
+            <Box
+              sx={{
+                width: "100%",
+                display:"flex",
+                justifyContent:"center"
+              }}
+            >
+              <Line data={data} options={options} />
+            </Box>
           </Box>
         </Paper>
         <Paper
@@ -192,6 +271,8 @@ export function Graphics() {
           sx={{
             mt: 2,
             width: 1,
+            display: "flex",
+            flexDirection: "column",
           }}
         >
           <Box
@@ -199,15 +280,38 @@ export function Graphics() {
               flex: "20%",
             }}
           >
-            12
+            <Typography
+              sx={{
+                height: 1,
+                padding: 1,
+                display: "flex",
+                alignItems: "center",
+                marginLeft: 2,
+                fontSize: 28,
+                fontWeight: "bold",
+              }}
+            >
+              Top 10 Productos Más Vendidos
+            </Typography>
           </Box>
           <Box
             sx={{
               flex: "80%",
-              backgroundColor: "red",
+              padding: "0 20px 20px 20px",
+              maxWidth: "1300px",
+              width: 1,
+              alignSelf: "center",
             }}
           >
-            12231321
+            <Box
+              sx={{
+                width: "100%",
+                display:"flex",
+                justifyContent:"center"
+              }}
+            >
+              <Bar data={dataBar} options={optionsBar} />
+            </Box>
           </Box>
         </Paper>
       </Box>

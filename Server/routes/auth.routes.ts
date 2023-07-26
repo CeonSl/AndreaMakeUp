@@ -11,6 +11,6 @@ router.post('/login',
     body('password', 'La contraseña debe ser mayor a 6 caracteres').isLength({ min: 6 }).escape(),
     loginHandler)
 
-router.get('/products', requireAuth, profileHandler)
+router.get('/graphics', requireAuth, profileHandler)
 
 export default router
