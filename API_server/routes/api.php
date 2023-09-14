@@ -38,3 +38,4 @@ Route::get('csrf/sells', [SellController::class, 'getCsrfToken']);
 
 Route::resource('sellproducts', SellProductController::class);
 Route::get('csrf/sellproducts', [SellProductController::class, 'getCsrfToken']);
+Route::post('get-new-sells/sellproducts', [SellProductController::class, 'getCsrfToken']);

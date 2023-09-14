@@ -17,8 +17,27 @@ import {
   Title,
   Tooltip,
 } from "chart.js";
+import { useEffect, useState } from "react";
+import { useFetchGetNewSells } from "../../logic/GetNewSellsByDate";
 
 export function Graphics() {
+  const [startDate, setStartDate] = useState<Date | null>(new Date());
+
+  const handleDateChange = (date: Date | null) => {
+    if (date) {
+      const newDate = new Date(date);
+      setStartDate(newDate);
+    }
+  };
+
+  const findNewSells = () => {
+    const { newSellsRecieved } = useFetchGetNewSells(
+      startDate!.getMonth(),
+      startDate!.getFullYear()
+    );
+    return newSellsRecieved // Use the fetched value directly
+  };
+
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -95,7 +114,7 @@ export function Graphics() {
           "rgba(55, 99, 132, 0.5)",
           "rgba(255, 120, 132, 0.5)",
           "rgba(255, 99, 32, 0.5)",
-          "rgba(155, 29, 232, 0.5)"
+          "rgba(155, 29, 232, 0.5)",
         ],
       },
     ],
@@ -118,6 +137,7 @@ export function Graphics() {
             <DatePicker
               label="Rango de Tiempo"
               views={["month", "year"]}
+              onChange={handleDateChange}
               sx={{
                 "& .MuiOutlinedInput-notchedOutline": {
                   border: "none",
@@ -151,7 +171,7 @@ export function Graphics() {
             <PaperWithStadistics
               title="Nuevas Ventas"
               info="vs los últimos 30 días"
-              mainData={200}
+              mainData={findNewSells()}
             >
               <MovingIcon />
               13%
@@ -258,8 +278,8 @@ export function Graphics() {
             <Box
               sx={{
                 width: "100%",
-                display:"flex",
-                justifyContent:"center"
+                display: "flex",
+                justifyContent: "center",
               }}
             >
               <Line data={data} options={options} />
@@ -306,8 +326,8 @@ export function Graphics() {
             <Box
               sx={{
                 width: "100%",
-                display:"flex",
-                justifyContent:"center"
+                display: "flex",
+                justifyContent: "center",
               }}
             >
               <Bar data={dataBar} options={optionsBar} />

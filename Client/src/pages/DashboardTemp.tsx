@@ -166,7 +166,7 @@ export function DashBoardTemp({ sort, setSort, categories, products,
     return (
         <>
             {loading ? <Spinner /> :
-                <>
+                <Box sx={{mx:10}}>
                     <Box sx={{ marginTop: 10, padding: 1, fontSize: '0.85rem' }}>
                         {
                             (products && productsDataSorted) &&
@@ -232,9 +232,6 @@ export function DashBoardTemp({ sort, setSort, categories, products,
                     <Container sx={{ minWidth: "100%", marginTop: 2 }} maxWidth='lg'>
 
                         <ToastContainer position="top-center" autoClose={750} hideProgressBar={true} />
-                        <div className={styles.containerOptionsPerfil} id='optionsPerfil'>
-                            <OptionsProfile />
-                        </div>
                         <div>
 
 
@@ -278,7 +275,7 @@ export function DashBoardTemp({ sort, setSort, categories, products,
                             }
                         </div>
                     </Container>
-                </>
+                </Box>
             }
         </>
     )

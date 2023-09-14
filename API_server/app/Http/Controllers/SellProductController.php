@@ -50,6 +50,20 @@ class SellProductController extends Controller
         return $response;
     }
 
+    public function getNewSellsByDate(Request $request) {
+        $data = $request->all();
+        // $month = $data['month'];
+        // $year = $data['year'];
+        return response()->json(['Mensaje' => 0], 200);
+        // $dataSells = SellProduct::all();
+        // for($i = 0; $i < sizeof($dataSells); $i++) {
+        //     if($dataSells[$i]['created_at']->format('n') == $month) {
+        //         return response()->json(['Mensaje' => 'Es correcto'], 200);
+        //     }
+        // }
+        // return response()->json(['Mensaje' => 'NO es correcto'], 200);
+    }
+
     public function show($id)
     {
         $sellProduct = SellProduct::find($id);

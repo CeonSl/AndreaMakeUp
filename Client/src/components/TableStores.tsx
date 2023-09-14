@@ -28,7 +28,6 @@ export function TableStores({ stores, storesSorted, sort }: tableProps) {
                     <TableRow>
                         <TableCell>N°</TableCell>
                         <TableCell>Descripción</TableCell>
-                        <TableCell>Tipo</TableCell>
                         <TableCell></TableCell>
                     </TableRow>
                 </TableHead>

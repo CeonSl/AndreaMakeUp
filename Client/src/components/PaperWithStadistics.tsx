@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 
 interface props {
   title: string;
-  mainData: number | string;
+  mainData: number | undefined | string;
   children: React.ReactNode;
   info: string;
   fontSizeSended?: number;
@@ -52,7 +52,7 @@ export default function PaperWithStadistics({
                 sx={{
                   fontSize: fontSizeSended ? fontSizeSended : 50,
                   fontWeight: "bold",
-                  marginTop: fontSizeSended ? 2 : ''
+                  marginTop: fontSizeSended ? 2 : "",
                 }}
               >
                 {mainData}
